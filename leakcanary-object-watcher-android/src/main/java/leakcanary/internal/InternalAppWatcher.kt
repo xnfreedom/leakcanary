@@ -24,9 +24,11 @@ internal object InternalAppWatcher {
 
   private val onAppWatcherInstalled: (Application) -> Unit
 
-  val isDebuggableBuild by lazy {
+  val isDebuggableBuild = true
+
+  /*val isDebuggableBuild by lazy {
     (application.applicationInfo.flags and ApplicationInfo.FLAG_DEBUGGABLE) != 0
-  }
+  }*/
 
   lateinit var application: Application
 
